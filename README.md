@@ -71,7 +71,11 @@ make changes to the `admin.py` file
 
 ## Templates
 
-Adding this templates folder to settings.py file
+Adding templates folder to `settings.py` file
+
+```py
+"DIRS": [BASE_DIR/'templates'],
+```
 
 
 
