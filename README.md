@@ -59,3 +59,13 @@ INSTALLED_APPS = [
 ]
 ```
 
+## create a superuser for our web application that will access the admin panel
+
+not commited
+
+```sh
+python manage.py createsuperuser
+```
+
+make changes to the `admin.py` file
+
