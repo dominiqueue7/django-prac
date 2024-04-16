@@ -41,3 +41,21 @@ python manage.py startapp post
 
 ## Defining Models
 
+```sh
+python manage.py makemigrations
+python manage.py migrate
+```
+specify the project in `settings.py`
+
+```py
+INSTALLED_APPS = [
+	'django.contrib.admin',
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.messages',
+	'django.contrib.staticfiles',
+	'post.apps.PostConfig', # our app name
+]
+```
+
