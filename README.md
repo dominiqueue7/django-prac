@@ -69,3 +69,9 @@ python manage.py createsuperuser
 
 make changes to the `admin.py` file
 
+## Templates
+
+Adding this templates folder to settings.py file
+
+
+
