@@ -1,6 +1,6 @@
-from .models import Post
+from post.models import Post
 from django.views.generic import ListView
 
-class PostView(ListView):
+class HomeView(ListView):
 	model = Post
 	template_name = 'home.html'
