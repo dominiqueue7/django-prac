@@ -4,4 +4,5 @@ from .views import *
 
 urlpatterns = [
 	path('',todo,name="todo"),
+	path('delete/<int:todo_id>/', delete, name='delete'),
 ]

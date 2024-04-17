@@ -40,6 +40,7 @@ ToDo
 				csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val() 
 			}, 
 			success:function(data){ 
+				$('#task').val('');
 				$('#todo-container').html(data);
 			} 
 			}) 
