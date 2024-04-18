@@ -77,5 +77,25 @@ Adding templates folder to `settings.py` file
 "DIRS": [BASE_DIR/'templates'],
 ```
 
+# Troubleshooting
+
+## The Django Admin CSS isn't working!
+
+https://help.pythonanywhere.com/pages/DjangoAdminCSSNotWorking/
+
+1. make "static" dir
+
+2. Set `STATIC_ROOT` in `settings.py`
+
+```py
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+```
+
+3. run `collectstatic`
+
+```sh
+python manage.py collectstatic
+```
+
 
 
