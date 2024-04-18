@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2>Login</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.username.label_tag }}
+                        <input type="text" name="{{ form.username.name }}" class="form-control" required id="{{ form.username.id_for_label }}" {% if form.username.value != None %} value="{{ form.username.value }}" {% endif %}>
+                    </div>
+                    <div class="form-group">
+                        {{ form.password.label_tag }}
+                        <input type="password" name="{{ form.password.name }}" class="form-control" required id="{{ form.password.id_for_label }}">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}
