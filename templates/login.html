@@ -6,12 +6,6 @@ Login
 
 {% block body %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-</head>
 <body>
     <div class="container">
         <div class="row justify-content-center">
@@ -27,8 +21,9 @@ Login
                         {{ form.password.label_tag }}
                         <input type="password" name="{{ form.password.name }}" class="form-control" required id="{{ form.password.id_for_label }}">
                     </div>
-                    <button class="btn btn-primary" type="submit">Login</button>
+                    <button class="btn btn-primary mt-3" type="submit">Login</button>
                 </form>
+                <a class="btn btn-warning mt-3" href="{% url 'signup' %}">Sign up</a>
             </div>
         </div>
     </div>
