@@ -13,27 +13,27 @@ Sign Up
                 {% csrf_token %}
                 <div class="form-group">
                     {{ form.username.label_tag }}
-                    <input type="text" name="{{ form.username.name }}" class="form-control" required id="{{ form.username.id_for_label }}" {% if form.username.value != None %} value="{{ form.username.value }}" {% endif %}>
+                    <input type="text" name="{{ form.username.name }}" class="form-control {% if form.username.errors %}is-invalid{% endif %}" required id="{{ form.username.id_for_label }}" {% if form.username.value != None %} value="{{ form.username.value }}" {% endif %}>
                 </div>
                 <div class="form-group">
                     {{ form.first_name.label_tag }}
-                  <input type="text" name="{{ form.first_name.name }}" class="form-control" required id="{{ form.first_name.id_for_label }}" {% if form.first_name.value != None %} value="{{ form.first_name.value }}" {% endif %}>
+                    <input type="text" name="{{ form.first_name.name }}" class="form-control {% if form.first_name.errors %}is-invalid{% endif %}" required id="{{ form.first_name.id_for_label }}" {% if form.first_name.value != None %} value="{{ form.first_name.value }}" {% endif %}>
                 </div>
                 <div class="form-group">
                     {{ form.last_name.label_tag }}
-                    <input type="text" name="{{ form.last_name.name }}" class="form-control" required id="{{ form.last_name.id_for_label }}" {% if form.last_name.value != None %} value="{{ form.last_name.value }}" {% endif %}>
+                    <input type="text" name="{{ form.last_name.name }}" class="form-control {% if form.last_name.errors %}is-invalid{% endif %}" required id="{{ form.last_name.id_for_label }}" {% if form.last_name.value != None %} value="{{ form.last_name.value }}" {% endif %}>
                 </div>
                 <div class="form-group">
                     {{ form.email.label_tag }}
-                    <input type="email" name="{{ form.email.name }}" class="form-control" required id="{{ form.email.id_for_label }}" {% if form.email.value != None %} value="{{ form.email.value }}" {% endif %}>
+                    <input type="email" name="{{ form.email.name }}" class="form-control {% if form.email.errors %}is-invalid{% endif %}" required id="{{ form.email.id_for_label }}" {% if form.email.value != None %} value="{{ form.email.value }}" {% endif %}>
                 </div>
                 <div class="form-group">
                     {{ form.password1.label_tag }}
-                    <input type="password" name="{{ form.password1.name }}" class="form-control" required id="{{ form.password1.id_for_label }}">
+                    <input type="password" name="{{ form.password1.name }}" class="form-control {% if form.password2.errors %}is-invalid{% endif %}" required id="{{ form.password1.id_for_label }}">
                 </div>
                 <div class="form-group">
                     {{ form.password2.label_tag }}
-                    <input type="password" name="{{ form.password2.name }}" class="form-control" required id="{{ form.password2.id_for_label }}">
+                    <input type="password" name="{{ form.password2.name }}" class="form-control {% if form.password2.errors %}is-invalid{% endif %}" required id="{{ form.password2.id_for_label }}">
                 </div>
                     {% if form.errors %}
                     <div class="alert alert-danger mt-2">
