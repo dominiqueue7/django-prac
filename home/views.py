@@ -56,3 +56,7 @@ class SignupView(View):
             login(request, user)
             return HttpResponseRedirect(reverse('home'))
         return render(request, 'signup.html', {'form': form})
+
+class FxChartView(View):
+    def get(self, request):
+        return render(request, 'forex-chart.html')
